@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>PlayNext | Games For You</title>
 </head>
 <body>
     <header>
-        <h1>PlayNext</h1>
-        <p>Your next favorite game is just a &nbsp;<strong>click away!</strong></p>
+        <h1>PLAYNEXT</h1>
+        <p>Your next favorite game is just a&nbsp;<strong>click away!</strong></p>
         <nav role="navigation" aria-label="Main navigation">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Browse</a></li>
-                <li><a href="#">News</a></li>
+                <li><a href="#">BROWSE</a></li>
+                <li><a href="#">NEWS</a></li>
+                <li><a href="#">CATGORIES</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="featured-games" class="section">
+        <section id="featured-games">
             <h2>Featured Games</h2>
-            <article class="game-card">
-                <img src="/client/public/images/gta5.jpg" width="300" height="300" alt="Grand Theft Auto V game cover"
+            <div id="game-grid">
+            <article>
+                <img src="/client/public/images/gta5.jpg" width="300" height="300" alt="Cover image for Grand Theft Auto V"
                      srcset="/client/public/images/gta5.jpg 300w,
                             /client/public/images/gta5.jpg 600w"
                             sizes="(max-width: 300px) 300px
@@ -32,10 +34,10 @@
                 <p>action &middot; 9.5/10</p>
                 <a href="/games/gta5">See Details</a>
                 </div>
-            </article><br>
+            </article>
 
-            <article class="game-card">
-                <img src="/client/public/images/cyberpunk-2077.jpg" width="300" height="300" alt="cyberpunk 2077 game cover"
+            <article>
+                <img src="/client/public/images/cyberpunk-2077.jpg" width="300" height="300" alt="Cover image for cyberpunk 2077"
                      srcset="/client/public/images/cyberpunk-2077.jpg 300w,
                             /client/public/images/cyberpunk-2077.jpg 600w"
                      sizes="(max-width: 300px) 300px
@@ -46,10 +48,10 @@
                 <p>sci/fi action &middot; 9.5/10</p>
                 <a href="/games/cyberpunk-2077">See Details</a>
                 </div>
-            </article><br>
+            </article>
 
-            <article class="game-card">
-                <img src="/client/public/images/gta6.png" width="300" height="300" alt="Grand Theft Auto VI game cover"
+            <article>
+                <img src="/client/public/images/gta6.png" width="300" height="300" alt="Cover image for Grand Theft Auto VI"
                      srcset="/client/public/images/gta6.png 300w,
                              /client/public/images/gta6.png 600w"
                      sizes="(max-width: 300px) 300px
@@ -61,30 +63,35 @@
                 <a href="/games/gta6">See Details</a>
                 </div>
             </article>
+            </div>
         </section>
 
-        <section id="trailer" class="section">
-            <h2>Latest Trailer</h2>
+        <section id="trailers">
+            <h2>Latest Trailers</h2>
+            <div id="trailer-grid">
             <article>
                 <p><b>Ghost of Yōtei</b></p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/7z7kqwuf0a8?si=nnDlflWCP9vd_GvN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/7z7kqwuf0a8?si=nnDlflWCP9vd_GvN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </article>
 
             <article>
                 <p><b>The Witcher 4 </b></p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/yWMu6JeT2g8?si=8tSkRpC2O7XAwB-9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/yWMu6JeT2g8?si=8tSkRpC2O7XAwB-9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </article>
+            </div>
         </section>
 
-        <section id="login" class="section">
+        <section id="login">
             <h2>Log In</h2>
             <form action="/login" method="POST">
-                <label for="username">Username:</label>
+                <div class="login-field">
+                <label for="username">Username</label>
                 <input id="username" name="username" type="text" required />
-              
-                <label for="password">Password:</label>
+                </div>
+                <div class="login-field">
+                <label for="password">Password&nbsp;</label>
                 <input id="password" name="password" type="password" placeholder="abc@123" required />
-              
+                </div>
                 <button type="submit">Log In</button>
             </form>
             <p>Don't have an account? <a href="/register">Register here</a></p>
