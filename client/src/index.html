@@ -21,25 +21,35 @@
     <main>
         <section id="featured-games">
             <h2>Featured Games</h2>
+            <form id="add-game-form" style="margin-bottom: 1.5rem;">
+                <input type="text" id="game-title" placeholder="Game Title" required>
+                <input type="text" id="game-genre" placeholder="Game Genre" required>
+                <input type="text" id="game-rating" placeholder="Game Rating (0-10)" required>
+                <input type="text" id="game-image" placeholder="Game Image path" required>
+                <textarea id="game-description" placeholder="Game Description" required></textarea>
+                <button type="submit">Add Game</button>
+            </form>
             <div id="game-grid">
             <article>
                 <img src="/client/public/images/gta5.jpg" width="300" height="300" alt="Cover image for Grand Theft Auto V"
-                     srcset="/client/public/images/gta5.jpg 300w,
-                            /client/public/images/gta5.jpg 600w"
+                     srcset="/public/images/gta5.jpg 300w,
+                            /public/images/gta5.jpg 600w"
                             sizes="(max-width: 300px) 300px
                                    (max-width: 600px) 600px"
                 />
                 <div class="game-info">
                 <p><b>Grand Theft Auto V</b></p>
                 <p>action &middot; 9.5/10</p>
+                <p class="game-desc" data-short="Los Santos, a sprawling sun-soaked metropolis..." data-full="Los Santos, a sprawling sun-soaked metropolis full of self-help gurus, starlets and fading celebrities, once the envy of the Western world, now struggling to stay afloat in an era of economic uncertainty.">Los Santos, a sprawling sun-soaked metropolis...</p>
+                <button class="toggle-desc">Show More</button>
                 <a href="/games/gta5">See Details</a>
                 </div>
             </article>
 
             <article>
                 <img src="/client/public/images/cyberpunk-2077.jpg" width="300" height="300" alt="Cover image for cyberpunk 2077"
-                     srcset="/client/public/images/cyberpunk-2077.jpg 300w,
-                            /client/public/images/cyberpunk-2077.jpg 600w"
+                     srcset="/public/images/cyberpunk-2077.jpg 300w,
+                            /public/images/cyberpunk-2077.jpg 600w"
                      sizes="(max-width: 300px) 300px
                             (max-width: 600px) 600px"
                 >
@@ -52,8 +62,8 @@
 
             <article>
                 <img src="/client/public/images/gta6.png" width="300" height="300" alt="Cover image for Grand Theft Auto VI"
-                     srcset="/client/public/images/gta6.png 300w,
-                             /client/public/images/gta6.png 600w"
+                     srcset="/public/images/gta6.png 300w,
+                             /public/images/gta6.png 600w"
                      sizes="(max-width: 300px) 300px
                             (max-width: 600px) 600px"
                 />
@@ -101,5 +111,6 @@
     <footer>
         <small>&copy; 2025 PlayNext. All rights reserved.</small>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
